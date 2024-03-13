@@ -2,6 +2,8 @@
 
 country = $0
 
+echo "start script with country $country"
+
 runXrayrs(){
 	xrayrs=$(ls "/root/stork/xrayr")
 	for filename in $xrayrs
@@ -32,7 +34,12 @@ wget -N --no-check-certificate https://gitlab.com/xx.stork/script/-/raw/master/w
 # 安装git
 apt install git -y
 # 下载对应脚本
-mkdir /root/stork
+if [ -d "/root/stork" ];then
+	rm -rf "/root/stork"
+else
+	mkdir /root/stork
+fi
+
 git clone -b $country https://github.com/stork11/Script.Node.git /root/stork
 
 runXrayrs
