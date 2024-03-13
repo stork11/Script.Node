@@ -27,19 +27,25 @@ runHysterias(){
 
 # 打开bbr
 bash <(curl -Ls neko.nnr.moe/iiii.sh)
+
 # 安装Docker
-# curl -fsSL https://get.docker.com/ | sh
+if [ ! "$(command -v docker)" ]; then
+  echo "docker 没有安装" >&2
+  curl -fsSL https://get.docker.com/ | sh
+fi
+
 # 安装探针
 wget -N --no-check-certificate https://gitlab.com/xx.stork/script/-/raw/master/ws2.sh
+
 # 安装git
 apt install git -y
+
 # 下载对应脚本
 if [ -d "/root/stork" ];then
 	rm -rf "/root/stork"
 else
 	mkdir /root/stork
 fi
-
 git clone -b "$country" https://github.com/stork11/Script.Node.git /root/stork
 
 runXrayrs
