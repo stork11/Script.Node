@@ -40,7 +40,7 @@ else
 	mkdir /root/stork
 fi
 
-git clone -b $country https://github.com/stork11/Script.Node.git /root/stork
+git clone -b "$country" https://github.com/stork11/Script.Node.git /root/stork
 
 runXrayrs
 runHysterias
