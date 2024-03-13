@@ -1,6 +1,6 @@
 #!/bin/bash
 
-country=$0
+country=$1
 
 echo "start script with country $country"
 
