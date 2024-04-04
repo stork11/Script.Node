@@ -9,7 +9,7 @@ tls:
 auth:
   type: v2board
 trafficStats:
-  listen: 127.0.0.1:7653
+  listen: 127.0.0.1:8201
 acl: 
   inline: 
     - reject(pincong.rocks) #acl规则自行查阅hysteria2文档
