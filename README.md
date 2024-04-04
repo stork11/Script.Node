@@ -1,2 +1,0 @@
-# Script.Node
- Nodes script 
