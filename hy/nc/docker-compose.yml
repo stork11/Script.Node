@@ -9,4 +9,4 @@ services:
       - ./server.yaml:/etc/hysteria/server.yaml         # 这里不用改。
       - ./xxx.crt:/etc/hysteria/example.com.crt # 这里不用改。
       - ./xxx.key:/etc/hysteria/example.com.key # 这里不用改。
-    command: ["server", "-c", "/etc/hysteria/server.yaml"]
+    command: ["hysteria", "server", "-c", "/etc/hysteria/server.yaml"]
