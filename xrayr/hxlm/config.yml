@@ -17,7 +17,7 @@ Nodes:
     ApiConfig:
       ApiHost: "https://soga.hxlm.org"
       ApiKey: "JAaFBCsiFTwA9hz7"
-      NodeID: 11
+      NodeID: 12
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: true # Enable Vless for V2ray Type
