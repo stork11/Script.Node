@@ -15,7 +15,7 @@ ConnectionConfig:
 Nodes:
   - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, V2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel
     ApiConfig:
-      ApiHost: "https://soga.apiant.xyz"
+      ApiHost: "https://soga.antlink.cc"
       ApiKey: "JAnFFzsiFTwA9hz7"
       NodeID: 41
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
