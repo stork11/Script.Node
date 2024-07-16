@@ -10,7 +10,7 @@ runXrayrs(){
 	do
 		xr="/root/stork/xrayr/$filename"
 		echo $xr
-		docker run --restart=always --name xr-$filename -d -v $xr/config.yml:/etc/XrayR/config.yml --network=host ghcr.io/rebecca554owen/xrayr:master
+		docker run --restart=always --name xr-$filename -d -v $xr/config.yml:/etc/XrayR/config.yml --network=host --log-opt max-size=10m --log-opt max-file=3 ghcr.io/rebecca554owen/xrayr:master
 	done
 }
 
