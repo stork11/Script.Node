@@ -51,5 +51,5 @@ git clone -b "$country" https://github.com/stork11/Script.Node.git /root/stork
 runXrayrs
 runHysterias
 
-bash /root/ws2.sh
+# bash /root/ws2.sh
 
