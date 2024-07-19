@@ -58,16 +58,16 @@ Nodes:
       DisableLocalREALITYConfig: false  # 是否忽略本地 REALITY 配置
       REALITYConfigs: # 本地 REALITY 配置
         Show: false # Show REALITY debug
-        Dest: addons.mozilla.org:443 # REALITY 目标地址
+        Dest: viu.tv:443 # REALITY 目标地址
         ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
         ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
-          - addons.mozilla.org
-        PrivateKey: rB_YrKNKB0Hx5XRHNc-pEeQ15w4nen_j_G7oQlH6Tgc # Required, execute './xray x25519' to generate.
+          - viu.tv
+        PrivateKey: YAs6KwZahtKsCG7gRUsKi8d9DfVTzCz_z5jLsvE-r1U # Required, execute './xray x25519' to generate.
         MinClientVer: 1.8.0 # Optional, minimum version of Xray client, format is x.y.z.
         MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
         MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
         ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
-          - 1a044c4d
+          - 2730eecb
       CertConfig:
         CertMode: none # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
         CertDomain: "www.tesla.cn" # Domain to cert
