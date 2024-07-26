@@ -2,7 +2,7 @@ version: "3.9"
 services:
   hysteria:
     image: ghcr.io/rebecca554owen/hysteria:latest
-    container_name: hy-nc
+    container_name: hy-ant
     restart: always
     network_mode: "host"
     logging:
