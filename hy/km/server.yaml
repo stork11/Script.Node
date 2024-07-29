@@ -1,0 +1,15 @@
+v2board:
+  apiHost: https://base.kuaimao.io # xboard面板域名
+  apiKey: Kuaimao20240125K # 通讯密钥
+  nodeID: 61 # Hysteria节点id
+tls:
+  type: tls
+  cert: /etc/hysteria/example.com.crt # 这里不要改。
+  key: /etc/hysteria/example.com.key  # 这里不要改。
+auth:
+  type: v2board
+trafficStats:
+  listen: 127.0.0.1:8401
+acl: 
+  inline: 
+    - reject(pincong.rocks) #acl规则自行查阅hysteria2文档
