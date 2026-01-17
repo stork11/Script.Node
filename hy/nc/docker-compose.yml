@@ -1,10 +1,15 @@
 version: "3.9"
 services:
   hysteria:
-    image: ghcr.io/rebecca554owen/hysteria:latest
+    image: ghcr.io/cedar2025/hysteria:latest
     container_name: hy-nc
     restart: always
     network_mode: "host"
+    logging:
+      driver: "json-file"   #默认的文件日志驱动
+      options:
+        max-size: "500m"
+        max-file: "3"
     volumes:
       - ./server.yaml:/etc/hysteria/server.yaml         # 这里不用改。
       - ./xxx.crt:/etc/hysteria/example.com.crt # 这里不用改。
