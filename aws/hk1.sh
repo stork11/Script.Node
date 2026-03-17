@@ -2,10 +2,13 @@
 
 # 入口
 wget -O install.sh --no-check-certificate https://pass.wocao.one/client/6fTb1GZlXWjtCC8p/install.sh && bash install.sh && rm install.sh -f
+apt update -y
 apt install cron -y
+
 curl -L -o /usr/local/bin/cf.ddns.2.sh https://raw.githubusercontent.com/stork11/Script.Node/master/cf.ddns.nn.interesting2026.blog.sh && \
-chmod +x /usr/local/bin/cf.ddns.2.sh && \
+chmod +x /usr/local/bin/cf.ddns.2.sh && /usr/local/bin/cf.ddns.2.sh && \
 (crontab -l 2>/dev/null; echo "* * * * * /usr/local/bin/cf.ddns.2.sh >/dev/null 2>&1") | crontab -
+
 
 # nyanpass
 
