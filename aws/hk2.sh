@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# 加载 BBR 模块
+modprobe tcp_bbr
+
+# 修改内核参数
+sysctl -w net.core.default_qdisc=fq
+sysctl -w net.ipv4.tcp_congestion_control=bbr
+
 # hy2
 
 wget -N --no-check-certificate "https://raw.githubusercontent.com/stork11/Script.Node/master/run.sh" && bash run.sh hk

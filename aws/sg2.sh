@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# 加载 BBR 模块
+modprobe tcp_bbr
+
+# 修改内核参数
+sysctl -w net.core.default_qdisc=fq
+sysctl -w net.ipv4.tcp_congestion_control=bbr
+
 wget -N --no-check-certificate "https://raw.githubusercontent.com/stork11/Script.Node/master/run.sh" && bash run.sh sg
 apt install cron -y
 curl -L -o /usr/local/bin/cf.ddns.sh https://raw.githubusercontent.com/stork11/Script.Node/master/cf.ddns.sg1.lovehonor.top.sh && \

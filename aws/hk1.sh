@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# 加载 BBR 模块
+modprobe tcp_bbr
+
+# 修改内核参数
+sysctl -w net.core.default_qdisc=fq
+sysctl -w net.ipv4.tcp_congestion_control=bbr
+
 # 入口
 wget -O install.sh --no-check-certificate https://pass.wocao.one/client/6fTb1GZlXWjtCC8p/install.sh && bash install.sh && rm install.sh -f
 apt update -y
